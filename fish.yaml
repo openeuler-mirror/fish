@@ -1,0 +1,4 @@
+version_control: github
+src_repo: fish-shell/fish-shell
+tag_prefix: 
+separator: .
