@@ -1,10 +1,11 @@
 Name:           fish
 Version:        3.3.1
-Release:        1
+Release:        2
 Summary:        Friendly interactive shell
 License:        GPLv2 and BSD and ISC and LGPLv2+ and MIT
 URL:            https://fishshell.com
 Source0:        https://github.com/fish-shell/fish-shell/releases/download/%{version}/%{name}-%{version}.tar.xz
+Patch01:        fix-test-failure.patch
 
 BuildRequires:  cmake >= 3.2
 BuildRequires:  ninja-build
@@ -97,5 +98,8 @@ fi
 %{_datadir}/pixmaps/fish.png
 
 %changelog
+* Thu Mar 10 2022 wulei <wulei80@huawei.com> - 3.3.1-2
+- Fix test failure
+
 * Mon July 12 2021 wulei <wulei80@huawei.com> - 3.3.1-1
 - Package init
