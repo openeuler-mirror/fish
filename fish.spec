@@ -1,10 +1,14 @@
 Name:           fish
 Version:        3.3.1
-Release:        1
+Release:        2
 Summary:        Friendly interactive shell
 License:        GPLv2 and BSD and ISC and LGPLv2+ and MIT
 URL:            https://fishshell.com
 Source0:        https://github.com/fish-shell/fish-shell/releases/download/%{version}/%{name}-%{version}.tar.xz
+# https://github.com/fish-shell/fish-shell/commit/ec8844d834cc9fe626e9fc326c6f5410341d532a
+Patch01:        fix-test-failure.patch
+# https://github.com/fish-shell/fish-shell/commit/37625053d424c1ab88de2b0c50c7fe71e1468e2c
+Patch02:        CVE-2022-20001.patch
 
 BuildRequires:  cmake >= 3.2
 BuildRequires:  ninja-build
@@ -97,5 +101,9 @@ fi
 %{_datadir}/pixmaps/fish.png
 
 %changelog
+* Mon May 16 2022 yaoxin <yaoxin30@h-partners.com> - 3.3.1-2
+- Fix CVE-2022-20001
+- Fix test failure
+
 * Mon July 12 2021 wulei <wulei80@huawei.com> - 3.3.1-1
 - Package init
