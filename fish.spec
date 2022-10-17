@@ -105,5 +105,5 @@ fi
 - Fix CVE-2022-20001
 - Fix test failure
 
-* Mon July 12 2021 wulei <wulei80@huawei.com> - 3.3.1-1
+* Mon Jul 12 2021 wulei <wulei80@huawei.com> - 3.3.1-1
 - Package init
