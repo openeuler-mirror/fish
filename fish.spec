@@ -107,5 +107,5 @@ fi
 * Mon May 09 2022 wangkai <wangkai385@huawei.com> - 3.3.1-2
 - Fix test failure
 
-* Mon July 12 2021 wulei <wulei80@huawei.com> - 3.3.1-1
+* Mon Jul 12 2021 wulei <wulei80@huawei.com> - 3.3.1-1
 - Package init
