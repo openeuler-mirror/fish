@@ -1,6 +1,6 @@
 Name:           fish
 Version:        3.3.1
-Release:        2
+Release:        4
 Summary:        Friendly interactive shell
 License:        GPLv2 and BSD and ISC and LGPLv2+ and MIT
 URL:            https://fishshell.com
@@ -101,6 +101,12 @@ fi
 %{_datadir}/pixmaps/fish.png
 
 %changelog
+* Mon Dec 12 2022 yaoxin <yaoxin30@h-partners.com> - 3.3.1-4
+- Synchronize the release of 22.03-LTS
+
+* Mon Dec 12 2022 yaoxin <yaoxin30@h-partners.com> - 3.3.1-3
+- Add comment: https://github.com/fish-shell/fish-shell/commit/ec8844d834cc9fe626e9fc326c6f5410341d532a
+
 * Mon May 16 2022 yaoxin <yaoxin30@h-partners.com> - 3.3.1-2
 - Fix CVE-2022-20001
 - Fix test failure
