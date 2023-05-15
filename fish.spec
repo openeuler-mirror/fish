@@ -1,14 +1,10 @@
 Name:           fish
-Version:        3.3.1
-Release:        3
+Version:        3.6.0
+Release:        1
 Summary:        Friendly interactive shell
 License:        GPLv2 and BSD and ISC and LGPLv2+ and MIT
 URL:            https://fishshell.com
 Source0:        https://github.com/fish-shell/fish-shell/releases/download/%{version}/%{name}-%{version}.tar.xz
-# https://github.com/fish-shell/fish-shell/commit/ec8844d834cc9fe626e9fc326c6f5410341d532a
-Patch01:        fix-test-failure.patch
-# https://github.com/fish-shell/fish-shell/commit/37625053d424c1ab88de2b0c50c7fe71e1468e2c
-Patch02:        CVE-2022-20001.patch
 
 BuildRequires:  cmake >= 3.2
 BuildRequires:  ninja-build
@@ -53,7 +49,7 @@ done
     -Dextra_functionsdir=%{_datadir}/%{name}/vendor_functions.d \
     -Dextra_confdir=%{_datadir}/%{name}/vendor_conf.d
 
-%ninja_build -C %{_vpath_builddir} all fish_tests
+%ninja_build -C %{_vpath_builddir} %{_smp_mflags} all fish_tests
 
 sed -i 's^/usr/local/^/usr/^g' %{_vpath_builddir}/*.pc
 
@@ -101,6 +97,9 @@ fi
 %{_datadir}/pixmaps/fish.png
 
 %changelog
+* Sun Feb 26 2023 lichaoran <pkwarcraft@hotmail.com> - 3.6.0-1
+- Upgrade to 3.6.0
+
 * Mon May 16 2022 yaoxin <yaoxin30@h-partners.com> - 3.3.1-3
 - Fix CVE-2022-20001
 
