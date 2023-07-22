@@ -1,6 +1,6 @@
 Name:           fish
 Version:        3.3.1
-Release:        3
+Release:        4
 Summary:        Friendly interactive shell
 License:        GPLv2 and BSD and ISC and LGPLv2+ and MIT
 URL:            https://fishshell.com
@@ -13,6 +13,7 @@ Patch02:        CVE-2022-20001.patch
 BuildRequires:  cmake >= 3.2
 BuildRequires:  ninja-build
 BuildRequires:  gcc
+BuildRequires:  libatomic
 BuildRequires:  gcc-c++
 BuildRequires:  gettext
 BuildRequires:  ncurses-devel
@@ -101,6 +102,9 @@ fi
 %{_datadir}/pixmaps/fish.png
 
 %changelog
+* Sat Jul 15 2023 yoo <sunyuechi@iscas.ac.cn> - 3.3.1-4
+- fix clang build error
+
 * Mon May 16 2022 yaoxin <yaoxin30@h-partners.com> - 3.3.1-3
 - Fix CVE-2022-20001
 
